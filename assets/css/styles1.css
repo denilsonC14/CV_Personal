@@ -1,0 +1,83 @@
+.timeline {
+    position: relative;
+    overflow: hidden;
+    height: 200px; /* Ajusta según necesites */
+    margin: 0 auto;
+   
+   
+
+
+
+}
+
+.timeline-item {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.timeline-item.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.item-title {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.item-period {
+    display: block;
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.item-small {
+    display: block;
+    color: #888;
+    font-size: 0.8em;
+}
+
+.timeline-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.timeline-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.timeline-dot.active {
+    background: #bd1550;
+}
+.timeline-item a {
+    text-decoration: none;
+    color: #bd1550;
+    transition: color 0.3s ease;
+}
+
+.timeline-item a:hover {
+    color: #bd1550;
+}
+
+.timeline-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
